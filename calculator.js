@@ -1,18 +1,25 @@
-function fun1() {
-    let f1 = document.getElementsByName("file1");
-    let f2 = document.getElementsByName("file2");
-    let r = document.getElementById("result");
-    var result = parseInt(f1[0].value) * parseInt(f2[0].value)
-    r.innerHTML = result;
-    let с = document.getElementById("btn1");
-    return false;
+function proiz(){
+    const check = /^[1-9][0-9]*$/;
+    let num1, num2, num3;
+    num1 = document.getElementById("n1").value;
+    num1=parseInt(num1);
+    num2 = document.getElementById("n2").value;
+    num2=parseInt(num2);
+    num3=num1*num2;
+
+    if (!check.test(num1)|| !check.test(num2)) {
+        alert('Вы сделали что-то не так!');
+        document.getElementById('out').innerHTML="Произошла ошибка!";
+    }
+    else{
+        document.getElementById('out').innerHTML=num3;
+    }
 }
-function fun2() {
-    let f1 = document.getElementsByName("file1");
-    let f2 = document.getElementsByName("file2");
-    let r = document.getElementById("result");
-    r.innerHTML = None;
-    f1.innerHTML = None;
-    f2.innerHTML = None;
-    return false;
-}
+
+
+window.addEventListener('DOMContentLoaded', function()  {
+    console.log("DOM fully loaded and parsed");
+
+    let buttonProiz = document.getElementById("proiz");
+    buttonProiz.addEventListener("click",proiz);
+})
