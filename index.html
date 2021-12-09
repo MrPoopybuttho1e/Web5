@@ -70,21 +70,15 @@
     <div class="row justify-content-center" >
     <div id = "calculator" class="row col-12 col-md-8 m-0 p-0">
         <h4>Калькулятор</h4>
-        <div id="result" ></div>
-        <form class="justify-content-center" id = "cal" >
-            <input name="file1" type="number" placeholder="Цена" id = "file1" min="0" oninput="validity.valid||(value='');" >
-            <input name="file2" type="number" placeholder="Количество" id = "file2" min="1" oninput="validity.valid||(value='');">
-            <button id="btn1" onclick="return fun1()"><h3>=</h3></button>
-            <button id="btn2" onclick="return fun2()"><h3>C</h3></button>
-            
-        </form>
+        <div class="boarding">
+            <input type ="text" id="n1" placeholder="Количество">
+            <input type ="text" id="n2" placeholder="Цена">
+            <button class="" id="proiz"> =</button>
+        </div>
+        <hr>
+        <p id="out">Результат:</p>
     </div>
     </div>
-
-
-    <main>
-
-</main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <footer id="footer"  class="navbar fixed-bottom">
